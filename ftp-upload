@@ -5,7 +5,10 @@ cd $DIR
 
 spawn sftp $env(SFTP_USER)@$SERVER
 expect {
-    "*(yes/no)?" { send "yes\n" }
+    "*(yes/no)?" { 
+        send "yes\n" 
+        expect "*password:" send "$env(SFTP_PWD)\n"
+    }
     "*password:" { send "$env(SFTP_PWD)\n" }
 }
 expect "sftp>"
@@ -18,21 +21,3 @@ expect "sftp>"
 send "close\n"
 expect "sftp>"
 send "bye\n"
-
-
-# sftp $FTP_USER@$SERVER <<EOF
-# yes
-# $FTP_PWD
-# mkdir $dir
-# cd $dir
-# mput *
-# close
-# bye
-
-# sshpass -p $FTP_PWD $FTP_USER@$server << !
-#    mkdir $dir
-#     cd $dir
-#     mput *
-#     close
-#     bye
-# !
