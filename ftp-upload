@@ -2,6 +2,7 @@
 set SERVER ssh.strato.de
 set DIR [lindex $argv 0];
 cd $DIR
+set timeout 120
 
 spawn sftp $env(SFTP_USER)@$SERVER
 expect {
