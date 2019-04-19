@@ -11,7 +11,7 @@ after_success:
   - npm run coveralls
   - echo "user is $SFTP_USER"
   - echo "$SFTP_PASSWORD"
-  - cd build
+  - cd ./build
   - find . -type f
   - find . -type f -exec curl --ftp-create-dirs -T {} sftp://${SFTP_USER}:${SFTP_PASSWORD}@ssh.strato.de +
   - echo '[+] Uploaded'
