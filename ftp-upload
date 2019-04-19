@@ -1,12 +1,20 @@
 #!/bin/bash
-server=ssh.strato.de
+SERVER=ssh.strato.de
 dir=$1
 cd $dir
-sftp $FTP_USER@$server <<EOF
-yes
-$FTP_PWD
-mkdir $dir
-cd $dir
-mput *
-close
-bye
+# sftp $FTP_USER@$SERVER <<EOF
+# yes
+# $FTP_PWD
+# mkdir $dir
+# cd $dir
+# mput *
+# close
+# bye
+
+sshpass -e sftp -oBatchMode=no -b - $FTP_USER@$server << !
+   mkdir $dir
+    cd $dir
+    mput *
+    close
+    bye
+!
