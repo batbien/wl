@@ -9,5 +9,5 @@ script:
   - npm run build
 after_script:
   - npm run coveralls
-deploy:
-  find ./build -type f -exec curl --ftp-create-dirs -T {} sftp://${SFTP_USER}:${SFTP_PASSWORD}@ssh.strato.de +
+after_success:
+  - find ./build -type f -exec curl --ftp-create-dirs -T {} sftp://${SFTP_USER}:${SFTP_PASSWORD}@ssh.strato.de +
