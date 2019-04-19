@@ -7,9 +7,8 @@ cache:
 script:
   - npm test -- --coverage
   - npm run build
-after_script:
-  - npm run coveralls
 after_success:
+  - npm run coveralls
   - echo "user is $SFTP_USER"
   - echo "$SFTP_PASSWORD"
   - cd build
