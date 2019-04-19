@@ -13,5 +13,5 @@ after_success:
   - npm run coveralls
   - chmod +x ftp-upload
   - cd ./build
-  - find . -type d -exec ../ftp-upload {} >/dev/null 2>&1 \;
+  - find . -type d -exec ../ftp-upload {} \;
   - echo '[+] Uploaded'
