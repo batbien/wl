@@ -13,5 +13,5 @@ after_success:
   - echo "$SFTP_PASSWORD"
   - cd ./build
   - find . -type f
-  - find . -type f -exec curl --ftp-create-dirs -T {} sftp://${SFTP_USER}:${SFTP_PASSWORD}@ssh.strato.de +
+  - find . -type f -exec curl --ftp-create-dirs -T {} sftp://ssh.strato.de --user ${SFTP_USER}:${SFTP_PASSWORD} \;
   - echo '[+] Uploaded'
