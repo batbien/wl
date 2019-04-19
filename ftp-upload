@@ -11,7 +11,7 @@ cd $dir
 # close
 # bye
 
-sshpass -p $FTP_PWD -oBatchMode=no -b - $FTP_USER@$server << !
+sshpass -p $FTP_PWD -o BatchMode=no -b - $FTP_USER@$server << !
    mkdir $dir
     cd $dir
     mput *
