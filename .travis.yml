@@ -1,7 +1,5 @@
 
 sudo: required
-services:
-  - ftp
 language: node_js
 node_js:
   - stable
