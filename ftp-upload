@@ -1,7 +1,25 @@
-#!/bin/bash
-SERVER=ssh.strato.de
-DIR=$1
-cd $dir
+#!/usr/bin/expect
+set SERVER ssh.strato.de
+set DIR [lindex $argv 0];
+cd $DIR
+
+spawn sftp $env(SFTP_USER)@$SERVER
+expect {
+    "*(yes/no)?" { send "yes\n" }
+    "*password:" { send "$env(SFTP_PWD)\n" }
+}
+expect "sftp>"
+send "mkdir $DIR\n"
+expect "sftp>"
+send "cd $DIR\n"
+expect "sftp>"
+send "mput *\n"
+expect "sftp>"
+send "close\n"
+expect "sftp>"
+send "bye\n"
+
+
 # sftp $FTP_USER@$SERVER <<EOF
 # yes
 # $FTP_PWD
@@ -18,17 +36,3 @@ cd $dir
 #     close
 #     bye
 # !
-
-spawn sftp $FTP_USER@$SERVER
-expect "*yes/no*)
-send "yes\n"
-expect "password:"
-send "$FTP_PWD\n"
-expect "sftp>"
-send "mkdir $dir\n"
-expect "sftp>"
-send "cd $DIR\n"
-expect "sftp>"
-send "mput *\n"
-expect "sftp>"
-send "exit\n"
