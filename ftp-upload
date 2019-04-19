@@ -1,6 +1,6 @@
 #!/bin/bash
 SERVER=ssh.strato.de
-dir=$1
+DIR=$1
 cd $dir
 # sftp $FTP_USER@$SERVER <<EOF
 # yes
@@ -11,10 +11,24 @@ cd $dir
 # close
 # bye
 
-sshpass -p $FTP_PWD -o BatchMode=no -b - $FTP_USER@$server << !
-   mkdir $dir
-    cd $dir
-    mput *
-    close
-    bye
-!
+# sshpass -p $FTP_PWD $FTP_USER@$server << !
+#    mkdir $dir
+#     cd $dir
+#     mput *
+#     close
+#     bye
+# !
+
+spawn sftp $FTP_USER@$SERVER
+expect "*yes/no*)
+send "yes\n"
+expect "password:"
+send "$FTP_PWD\n"
+expect "sftp>"
+send "mkdir $dir\n"
+expect "sftp>"
+send "cd $DIR\n"
+expect "sftp>"
+send "mput *\n"
+expect "sftp>"
+send "exit\n"
