@@ -1,0 +1,94 @@
+.Footer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  bottom: 0;
+  width: 100vw;
+  position: fixed;
+  transition: all 0.55s ease-in;
+  color: rgba(102, 84, 53, 0.8);
+}
+
+.Show {
+  transition: all 0.55s ease-in;
+  bottom: 6px;
+}
+
+.Hide {
+  transition: all 0.15s ease-in;
+  bottom: -100px;
+}
+
+.NavButton {
+  color: orange;
+  font-size: 4em;
+  opacity: 0.45;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.NavButton:hover,
+.NavButton:active {
+  opacity: 1 !important;
+}
+
+.Copyright {
+  margin: 0;
+  padding: 0;
+  font-size: 1.15em;
+  bottom: 0;
+  position: relative;
+  margin-top: -18px;
+}
+
+.Copyright>p {
+  margin: 10px;
+}
+
+.Copyright>button{
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  color: rgba(178, 120, 12,1);
+}
+
+.Copyright>button:hover,
+.Copyright>button:active {
+  text-decoration: underline;
+
+  color: rgb(219, 155, 37);
+}
+
+.Circle {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: orange;
+  opacity: 0.1;
+  left: 50vw;
+  transform: translate(-50%, 40%);
+}
+
+/* --------------------------- Media Queries -------------------------------- */
+/* Small - Landscape */
+@media (max-height: 639px) and (min-aspect-ratio: 1/1) {
+  .Footer {
+    transform: scale(0.8) translate(230px, 10%);
+  }
+}
+/* Large - Landscape */
+@media ((min-height: 960px) and (min-aspect-ratio: 1/1)) or ((min-width: 960px) and (max-aspect-ratio: 1/1)) {
+  .Footer {
+    font-size: 1em;
+  }
+}
+/* Medium - Portrait */
+@media (min-width: 640px) and (max-aspect-ratio: 1/1) {
+  .Footer {
+    font-size: 0.9em;
+  }
+}

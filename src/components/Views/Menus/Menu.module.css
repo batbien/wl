@@ -1,0 +1,69 @@
+.MenuContainer {
+  text-align: center;
+}
+
+.MenuContainer>div{
+  text-align: right;
+  padding-right: 30px;
+}
+
+.MenuContainer>div>i {
+  font-size: 7em;
+  opacity: 0.16;
+  cursor: pointer;
+}
+
+.MenuContainer>div>i:hover,
+.MenuContainer>div>i:active {
+  color: rgba(255, 167, 0, 0.95);
+  opacity: 0.86;
+}
+
+.MenuContainer>h1{
+  margin: 0;
+  font-size: 4em;
+  font-weight: normal;
+}
+.MenuContainer>h2 {
+    margin: 0;
+    padding: 1em;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.MenuContainer>img {
+  width: 80%;
+}
+
+.MenuContainer>p {
+  padding: 1em 1em;
+  font-size: 1.2em;
+}
+
+.MenuContainer>button {
+  border: none;
+  background-color: rgba(255, 167, 0, 0.90);
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.4em;
+  border-radius: 9px;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+.MenuContainer>button:hover,
+.MenuContainer>button:active {
+  background-color: rgba(255, 167, 0, 1);
+}
+
+/* --------------------------- Media Queries -------------------------------- */
+/* Medium Width Up */
+@media (min-width: 640px) {
+
+  .MenuContainer>div>i {
+    font-size: 9em;
+  }
+
+  .MenuContainer>h1{
+    font-size: 5em;
+  }
+}

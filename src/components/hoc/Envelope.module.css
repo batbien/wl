@@ -1,0 +1,67 @@
+.EnvelopeTop {
+  position: absolute;
+  width: 100vh;
+  max-height: 50%;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.EnvelopeTop h1 {
+  margin-top: 28%;
+  font-size: 3em;
+  color: #595B5D;
+  opacity: 0.7;
+  font-family: 'Play', sans-serif;
+}
+
+.Content {
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+}
+/* 
+.NavButton {
+  color: orange;
+  font-size: 4em;
+  opacity: 0.45;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: -20vh;
+  left: 50vw;
+  transform: translateX(-50%);
+} */
+
+/* @media(min-width: 960px) { */
+@media (min-width: 960px), (min-aspect-ratio: 1/1) {
+  .EnvelopeTop {
+    opacity: 0.35;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important; */
+    clip-path: polygon(50% 0.3%, 52.5% 0.5%, 55% 1%, 58% 2%, 60% 3.5%, 61% 4.5%, 63% 7%, 64.5% 8.5%, 100% 14%, 100% 100%, 0 100%, 0 14%, 35.5% 8.5%, 37% 7%, 39% 4.5%, 40% 3.5%, 42% 2%, 45% 1%, 47.5% 0.5%) !important;
+  }
+
+  .EnvelopeTop h1 {
+    margin-top: 4.5%;
+    opacity: 1;
+  }
+
+  .Content {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+  }
+}
+
+.Bright {
+  background-color: rgba(187, 187, 187, 0.96);
+}
+
+.Brighter {
+  background-color: rgbs(204, 204, 204, 0.96);
+}
+
+.Dark {
+  background-color: rgba(6, 15, 22, 0.95);
+}
+
+.Darker {
+  background-color: rgba(7, 11, 15, 0.95);
+}

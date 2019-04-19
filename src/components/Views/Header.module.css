@@ -1,0 +1,194 @@
+.Header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.HeaderTitle {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 3em;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  text-transform: uppercase;
+  transform: translate(30px, 80px);
+  text-shadow: 0 5px 35px rgba(255, 255, 255, 0.7);
+}
+
+.HeaderSubTitle {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  transform: translate(30px, 145px);
+}
+
+.HeaderBg {
+  position: fixed;
+  right: 0;
+  height: 70vh;
+  transform: translate(50%, 21%);
+  animation: updown 4s ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(30px); }
+}
+
+.NavButton {
+  color: orange;
+  font-size: 4em;
+  opacity: 0.45;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 40px;
+  left: 50vw;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.NavButton:hover,
+.NavButton:active {
+  opacity: 1 !important;
+}
+
+.IconFB {
+  background-image: url('../../assets/images/facebook.png');
+  height: 35px;
+  width: 35px;
+  border: none;
+  box-sizing: border-box;
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  position: absolute;
+  left: 35px;
+}
+
+.IconFB:hover,
+.IconFB:active {
+  opacity: 1;
+  transform: translateY(-3%);
+}
+
+.IconInsta {
+  background-image: url('../../assets/images/instagram.png');
+  height: 36px;
+  width: 36px;
+  border: none;
+  box-sizing: border-box;
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  position: absolute;
+  left: 35px;
+}
+
+.IconInsta:hover,
+.IconInsta:active {
+  opacity: 1;
+  transform: translateY(-3%);
+}
+
+/* --------------------------- Media Queries -------------------------------- */
+/* Landscape */
+@media (min-aspect-ratio: 1/1) {
+  .HeaderBg {
+    height: 100vh;
+    transform: translate(30%, 2%);
+  }
+
+  .HeaderTitle {
+    transform: translate(50px, 50px);
+  }
+
+  .HeaderSubTitle {
+    transform: translate(50px, 110px);
+  }
+
+  .IconFB {
+    top: 10px;
+    left: 50px;
+  }
+
+  .IconInsta {
+    top: 30px;
+    left: 50px;
+  }
+}
+
+/* Medium*/
+@media (min-width: 640px) {
+  .HeaderTitle {
+    font-size: 5em;
+    transform: translate(60px, 80px);
+  }
+
+  .HeaderSubTitle {
+    font-size: 2em;
+    transform: translate(60px, 180px);
+  }
+
+  .IconFB {
+    height: 46px;
+    width: 46px;
+    top: 25px;
+  }
+
+  .IconInsta {
+    height: 46px;
+    width: 46px;
+    top: 0px;
+  }
+}
+
+/* Large */
+@media (min-width: 960px) {
+  .HeaderTitle {
+    font-size: 6.5em;
+    transform: translate(60px, 80px);
+  }
+
+  .HeaderSubTitle {
+    font-size: 2.6em;
+    transform: translate(60px, 205px);
+  }
+
+  .IconFB {
+    top: 5px;
+  }
+
+  .IconInsta {
+    top: 0px;
+  }
+}
+
+/* X Large - Landscape */
+@media (min-width: 1280px) and (min-aspect-ratio: 1/1) {
+  .HeaderTitle {
+    transform: translate(60px, 180px);
+  }
+
+  .HeaderSubTitle {
+    transform: translate(60px, 305px);
+  }
+
+  .HeaderBg {
+    height: 120vh;
+    transform: translate(35%, 8%);
+  }
+  .IconFB {
+    top: 35px;
+    left: 60px;
+  }
+
+  .IconInsta {
+    top: 30px;
+    left: 60px;
+  }
+}

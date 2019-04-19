@@ -1,0 +1,214 @@
+.MenusContainer {
+  margin: 0;
+  margin-top: 120px;
+  padding: 0;
+  font-family: 'Indie Flower', cursive;
+  color: #d1d1d1;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.MenusContainer>a {
+  padding: 5px 15px;
+  background-color: rgba(237, 158, 0, 0.8);
+  border-radius: 15px;
+  color: white;
+  display: inline-block;
+  font-size: 0.8em;
+}
+
+.MenusContainer>a:hover,
+.MenusContainer>a:active {
+  background-color: rgba(237, 158, 0, 0.9);
+  transform: translateY(-3%);
+}
+
+.ImageHeapContainer {
+  /* background-color: blue; */
+  position: relative;
+  width: 100vw;
+  height: 200px;
+  margin-top: 300px;
+}
+
+/* the div that contains an image div */
+.ImageHeapContainer>div {
+  /* background-color: rgba(123,44, 54, 0.4); */
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-sizing: border-box;
+  will-change: transform;
+}
+
+/* The image div */
+.ImageHeapContainer>div>div {
+  background-color: rgba(30, 23, 28, 0.98);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  will-change: transform;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px black;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  height: 200px;
+  bottom: 0;
+  cursor: grabbing;
+}
+
+/* The Label of an image */
+.ImageHeapContainer>div>div>p {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.NavButton {
+  position: relative;
+  color: orange;
+  font-size: 2.8em;
+  opacity: 0.45;
+  padding: 0;
+  margin: 0;
+  top: 10px;
+  cursor: pointer;
+}
+
+.NavButton:hover,
+.NavButton:active {
+  opacity: 1 !important;
+}
+
+/* --------------------------- Media Queries -------------------------------- */
+/* Landscape */
+@media (min-aspect-ratio: 1/1) {
+  .MenusContainer {
+    margin-top: 40px;
+  }
+
+  .ImageHeapContainer {
+    /* background-color: blue; */
+    height: 200px;
+    margin-top: 120px;
+  }
+
+  /* The image div */
+  .ImageHeapContainer>div>div {
+    width: 364px;
+    height: 250px;
+  }
+}
+
+/* Medium size, landscape */
+@media (min-height: 640px) and (max-height: 960px) and (min-aspect-ratio: 1/1) {
+  .MenusContainer {
+    margin-top: 90px;
+  }
+
+  .ImageHeapContainer {
+    /* background-color: blue; */
+    height: 200px;
+    margin-top: 230px;
+  }
+
+  /* The image div */
+  .ImageHeapContainer>div>div {
+    width: 509px;
+    height: 350px;
+  }
+
+  .NavButton {
+    top: 60px;
+  }
+}
+
+/* Medium size, portrait */
+@media(min-width: 640px) and (max-aspect-ratio: 1/1) {
+  .MenusContainer {
+    margin-top: 180px;
+  }
+
+  .ImageHeapContainer {
+    /* background-color: blue; */
+    height: 200px;
+    margin-top: 530px;
+  }
+
+  /* The image div */
+  .ImageHeapContainer>div>div {
+    width: 509px;
+    height: 350px;
+  }
+
+  .NavButton {
+    top: 60px;
+  }
+}
+
+/* Large size, landscape */
+@media (min-height: 960px) and (min-aspect-ratio: 1/1) {
+  .MenusContainer {
+    margin-top: 90px;
+    font-size: 1.9em;
+  }
+  .MenusContainer>a {
+    margin-top: 20px;
+    font-size: 1em;
+  }
+  .ImageHeapContainer {
+    /* background-color: blue; */
+    height: 200px;
+    margin-top: 350px;
+  }
+
+  /* The image div */
+  .ImageHeapContainer>div>div {
+    width: 655px;
+    height: 450px;
+  }
+
+  .NavButton {
+    top: 100px;
+  }
+}
+
+/* Large size, landscape */
+@media (min-width: 960px) and (max-aspect-ratio: 1/1) {
+  .MenusContainer {
+    margin-top: 90px;
+    font-size: 1.9em;
+  }
+  .MenusContainer>a {
+    margin-top: 20px;
+    font-size: 1em;
+  }
+  .ImageHeapContainer {
+    /* background-color: blue; */
+    height: 200px;
+    margin-top: 600px;
+  }
+
+  /* The image div */
+  .ImageHeapContainer>div>div {
+    width: 655px;
+    height: 450px;
+  }
+
+  .NavButton {
+    top: 100px;
+  }
+}

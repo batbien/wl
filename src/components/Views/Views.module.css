@@ -1,0 +1,28 @@
+/* @no-media */
+.Text {
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  color: #33272f;
+  font-size: 1.6em;
+}
+
+/* @no-media */
+.TextLight {
+  color: #b7acb4 !important;
+}
+
+/* --------------------------- Media Queries -------------------------------- */
+/* Landscape */
+@media (min-aspect-ratio: 1/1) {}
+
+/* Small - Landscape */
+@media(max-height: 639px) and (min-aspect-ratio: 1/1) {}
+
+/* Medium size, portrait */
+@media(min-width: 640px) and (max-aspect-ratio: 1/1) {}
+
+/* Large size, portrait */
+@media(min-width: 960px) and (max-aspect-ratio: 1/1) {}
+
+/* Medium size, landscape */
+@media(min-width: 960px) and (min-aspect-ratio: 1/1) {}
