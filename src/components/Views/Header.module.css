@@ -27,16 +27,21 @@
 }
 
 .HeaderBg {
-  position: fixed;
+  position: absolute;
   right: 0;
   height: 70vh;
-  transform: translate(50%, 21%);
   animation: updown 4s ease-in-out infinite alternate;
+  /* transform: translate(50%, 21%); */
 }
 
 @keyframes updown {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(30px); }
+  0% {
+    transform: translate(50%, 0);
+  }
+
+  100% {
+    transform: translate(50%, 30px);
+  }
 }
 
 .NavButton {
@@ -100,7 +105,17 @@
 @media (min-aspect-ratio: 1/1) {
   .HeaderBg {
     height: 100vh;
-    transform: translate(30%, 2%);
+    /* transform: translate(30%, 2%); */
+  }
+
+  @keyframes updown {
+    0% {
+      transform: translate(30%, 0);
+    }
+
+    100% {
+      transform: translate(30%, 30px);
+    }
   }
 
   .HeaderTitle {
@@ -180,8 +195,19 @@
 
   .HeaderBg {
     height: 120vh;
-    transform: translate(35%, 8%);
+    /* transform: translate(35%, 8%); */
   }
+
+  @keyframes updown {
+    0% {
+      transform: translate(35%, 0);
+    }
+
+    100% {
+      transform: translate(35%, 30px);
+    }
+  }
+
   .IconFB {
     top: 35px;
     left: 60px;
