@@ -1,12 +1,10 @@
 #!/bin/bash
 server=ftp.strato.de
-usr=$FTP_USER
-pwd=$FTP_PWD
 dir=$1
 cd $dir
 ftp -in <<EOF
 open $server
-user $usr $pwd
+user $FTP_USER $FTP_PWD
 mkdir $dir
 cd $dir
 mput *
