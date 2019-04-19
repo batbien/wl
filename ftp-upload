@@ -3,6 +3,7 @@ server=ssh.strato.de
 dir=$1
 cd $dir
 sftp $FTP_USER@$server <<EOF
+y
 $FTP_PWD
 mkdir $dir
 cd $dir
