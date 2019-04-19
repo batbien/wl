@@ -7,7 +7,7 @@ spawn sftp $env(SFTP_USER)@$SERVER
 expect {
     "*(yes/no)?" { 
         send "yes\n" 
-        expect "*password:" send "$env(SFTP_PWD)\n"
+        exp_continue
     }
     "*password:" { send "$env(SFTP_PWD)\n" }
 }
