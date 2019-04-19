@@ -1,0 +1,94 @@
+.ContactContainer {
+  margin: 0;
+  margin-top: 18vh;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  font-family: 'Indie Flower', cursive;
+  color: #33272f;
+  font-size: 1.2em;
+}
+
+.ContactRow {
+  width: 100vw;
+  margin: 0;
+  padding-left: 14px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.ContactRow p {
+  margin: 0;
+  padding: 0;
+}
+
+.ContactLabel {
+  margin: 0;
+  padding: 0;
+  padding-right: 15px;
+  font-weight: bold;
+}
+
+/* --------------------------- Media Queries -------------------------------- */
+/* Small - Landscape */
+@media (max-height: 639px) and (min-aspect-ratio: 1/1) {
+  .ContactContainer {
+    margin-top: 9vh;
+  }
+}
+
+/* Medium - Landscape */
+@media (min-height: 640px) and (max-height: 959px) and (min-aspect-ratio: 1/1) {
+  .ContactContainer {
+    margin-top: 18vh;
+    font-size: 1.6em;
+  }
+
+  .ContactRow {
+    padding-left: 24px;
+    padding-bottom: 8px;
+  }
+}
+
+/* Large - Landscape */
+@media (min-height: 960px) and (min-aspect-ratio: 1/1) {
+  .ContactContainer {
+    margin-top: 18vh;
+    font-size: 2em;
+  }
+
+  .ContactRow {
+    padding-left: 70px;
+    padding-bottom: 14px;
+  }
+}
+
+/* Medium - Portait */
+@media (min-width: 640px) and (max-aspect-ratio: 1/1) {
+  .ContactContainer {
+    margin-top: 21vh;
+    font-size: 1.6em;
+  }
+
+  .ContactRow {
+    padding-left: 60px;
+    padding-bottom: 8px;
+  }
+}
+
+/* Large - Portrait */
+@media (min-width: 960px) and (max-aspect-ratio: 1/1) {
+  .ContactContainer {
+    margin-top: 18vh;
+    font-size: 2em;
+  }
+
+  .ContactRow {
+    padding-left: 70px;
+    padding-bottom: 14px;
+  }
+}

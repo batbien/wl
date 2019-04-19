@@ -1,0 +1,49 @@
+.Container {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll !important;
+  z-index: 400;
+}
+
+.Modal {
+  position: absolute;
+  z-index: 500;
+  padding: 14px 4px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 1px 1px 2px #383838;
+  border-radius: 10px;
+  transition: all 0.4s ease-in;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: 83vw;
+  margin-top: 5vh;
+  margin-bottom: 100px;
+}
+
+.Shown {
+  top: 0vh;
+}
+
+.Hidden {
+  transition: all 0.4s ease-out;
+  top: -200vh;
+}
+
+/* --------------------------- Media Queries -------------------------------- */
+@media (min-width: 640px) and (max-width: 959px) {
+  .Modal {
+    width: 77vw;
+  }
+}
+
+@media (min-width: 960px) {
+  .Modal {
+    width: 70vw;
+  }
+}
