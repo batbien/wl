@@ -10,8 +10,9 @@ script:
 after_script:
   - npm run coveralls
 after_success:
-  - echo '[+] Build successful. Starting Deployment...'
-  - echo '[+] Uploading built files to server...'
-  - find ./build -type f
-  - find ./build -type f -exec curl --ftp-create-dirs -T {} sftp://${SFTP_USER}:${SFTP_PASSWORD}@ssh.strato.de +
+  - echo "user is $SFTP_USER"
+  - echo "$SFTP_PASSWORD"
+  - cd build
+  - find . -type f
+  - find . -type f -exec curl --ftp-create-dirs -T {} sftp://${SFTP_USER}:${SFTP_PASSWORD}@ssh.strato.de +
   - echo '[+] Uploaded'
