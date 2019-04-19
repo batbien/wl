@@ -12,6 +12,6 @@ after_script:
 after_success:
   - echo '[+] Build successful. Starting Deployment...'
   - echo '[+] Uploading built files to server...'
-  - echo 'SFTP_USER: $SFTP_USER'
+  - find ./build -type f
   - find ./build -type f -exec curl --ftp-create-dirs -T {} sftp://${SFTP_USER}:${SFTP_PASSWORD}@ssh.strato.de +
   - echo '[+] Uploaded'
