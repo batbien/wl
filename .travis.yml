@@ -9,9 +9,7 @@ script:
   - npm run build
 after_success:
   - npm run coveralls
-  - echo "user is $SFTP_USER"
-  - echo "$SFTP_PASSWORD"
+  - chmod +x ftp-upload
   - cd ./build
-  - find . -type f
-  - find . -type f -exec curl --ftp-create-dirs -T {} ftp://ssh.strato.de --user ${SFTP_USER}:${SFTP_PASSWORD} \;
+  - find . -type d -exec ../ftp-upload {} >/dev/null 2>&1 \;
   - echo '[+] Uploaded'
